@@ -7,5 +7,145 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	
+	<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width" />
+			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+			<meta name="generator" content={Astro.generator} />
+			<title>Ponte Guapa - Home</title>
+		</head>
+		<body>
+
+			<main>
+				<header>
+					<!--por definir -->
+				</header>
+
+				<nav class="nav">
+					<ul class="nav-list">
+						<li class="nav-item"><a class="nav-link" href=""> Inicio </a></li>
+						<li class="nav-item"><a class="nav-link" href=""> Servicios </a></li>
+						<li class="nav-item"><a class="nav-link" href="">  </a></li>
+						<li class="nav-item"><a class="nav-link" href=""> Producto </a></li>
+						<li class="nav-item"><a class="nav-link" href=""> Contacto </a></li>
+					</ul>
+				</nav>
+					
+				<div>
+					<!-- cambiar formato según corresponda, pero mantener el estilo del texto -->
+					<h3>Renueva tu belleza, relaja tu Alma. </h3>
+
+					
+				</div>
+
+				<div>
+					<p id="description">
+						En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso, 
+						hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos 
+						exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente
+						Dany Florez.
+
+					</p>
+				</div>
+
+				<div class="our-services">
+					<h2> Nuestros servicios </h2>
+					<section class="services">
+						<!-- aquí las tarjetas de los diferentes servicios, corregidas del prototipo visual -->
+							<div id="corte-de-cabello">
+								<img class="services-img" src="../../public/resources/images/services-home/corte-de-cabello.png" alt="Corte de cabello " width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Corte de Cabello </button>
+								</a>
+							</div>
+
+							<div id="pestañas">
+								<img class="services-img" src="../../public/resources/images/services-home/pestañas.png" alt="Pestañas" width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Pestañas </button>
+								</a>
+							</div>
+
+							<div id="uñas">
+								<img class="services-img" src="../../public/resources/images/services-home/uñas.png" alt="Uñas" width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Uñas </button>
+								</a>
+							</div>
+
+							<div id="maquillaje">
+								<img class="services-img" src="../../public/resources/images/services-home/maquillajes.png" alt="Maquillaje " width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Maquillaje </button>
+								</a>
+							</div>
+
+							<div id="depilacion">
+								<img class="services-img" src="../../public/resources/images/services-home/depilaciones.png" alt="Depilacion " width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Depilación </button>
+								</a>
+							</div>
+
+							<div id="masaje-relajante">
+								<img class="services-img" src="../../public/resources/images/services-home/masajes.png" alt="Masaje Relajante" width="150" height="200">
+								<p>Un recorte especial para realzar la gran mujer que eres</p>
+								<!-- botonn para acceder a detalles y sub servicios especificos -->
+								<a href="">
+									<button class="services-button"> Masaje relajante </button>
+								</a>
+							</div>
+					</section>
+				</div>
+
+				<div id="formulario" >
+					<form id="formulario-contacto">
+						<h3> Contactanos </h3>
+						<input type="text" placeholder="Nombre" required> 
+						<input type="text" placeholder="Apellido" required> 
+						<input type="email" placeholder="Email" required> 
+						<textarea placeholder="Escribe tu mensaje" required> Escribe tu mensaje </textarea> 
+						<button type="submit"> Enviar </button>
+					</form>
+				</div>
+
+				<div>
+					<h2> Encuentranos </h2>
+					<!--aquí añadiremos el mapa para llegar al negocio -->
+					<a class="footer-link" href="https://www.google.com.co/maps/place/11%C2%B013'34.7%22N+74%C2%B011'12.9%22W/@11.2263056,-74.1869167,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.2263056!4d-74.1869167?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D"  target="_blank" >Dirección: Calle 29H3 No. 22 - 01 Santa Marta D.T.C.H. - Colombia. Código Postal No. 470004</a>
+				</div>
+				
+
+
+				<footer>
+					<section>
+						<h3>Información de contacto</h3>
+					</section>
+
+					<section>
+						<h3> Derechos de autor </h3>
+						© 2025 Ponte Guapa by Dany Florez. All rights reserved | Desarrollado por el Centro de Desarrollo de Software
+					</section>
+					
+				</footer>
+
+				
+
+			</main>
+			
+			
+		</body>
+	</html>
 </Layout>
