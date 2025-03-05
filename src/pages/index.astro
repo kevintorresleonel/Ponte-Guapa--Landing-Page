@@ -1,20 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
 	<!doctype html>
-	<html lang="en">
+	<html lang="es">
 		<head>
 			<meta charset="UTF-8" />
 			<meta name="viewport" content="width=device-width" />
 			<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 			<meta name="generator" content={Astro.generator} />
-			<title>Ponte Guapa - Home</title>
+			<title>Ponte Guapa</title>
 		</head>
 		<body>
 
@@ -32,18 +28,18 @@ import Layout from '../layouts/Layout.astro';
 						<li class="nav-item"><a class="nav-link" href=""> Contacto </a></li>
 					</ul>
 				</nav>
-					
+
 				<div>
-					<!-- cambiar formato según corresponda, pero mantener el estilo del texto -->
+					<img src="../public/resources/images/background.jpeg" />
 					<h3>Renueva tu belleza, relaja tu Alma. </h3>
 
-					
+
 				</div>
 
 				<div>
 					<p id="description">
-						En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso, 
-						hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos 
+						En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso,
+						hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
 						exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente
 						Dany Florez.
 
@@ -118,20 +114,20 @@ import Layout from '../layouts/Layout.astro';
 				<div id="formulario" >
 					<form id="formulario-contacto">
 						<h3> Contactanos </h3>
-						<input type="text" placeholder="Nombre" required> 
-						<input type="text" placeholder="Apellido" required> 
-						<input type="email" placeholder="Email" required> 
-						<textarea placeholder="Escribe tu mensaje" required> Escribe tu mensaje </textarea> 
+						<input type="text" placeholder="Nombre" required>
+						<input type="text" placeholder="Apellido" required>
+						<input type="email" placeholder="Email" required>
+						<textarea placeholder="Escribe tu mensaje" required> Escribe tu mensaje </textarea>
 						<button type="submit"> Enviar </button>
 					</form>
 				</div>
 
 				<div>
 					<h2> Encuentranos </h2>
-					<!--aquí añadiremos el mapa para llegar al negocio -->
+					<img src="../public/resources/images/map.jpg" />
 					<a class="footer-link" href="https://www.google.com.co/maps/place/11%C2%B013'34.7%22N+74%C2%B011'12.9%22W/@11.2263056,-74.1869167,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.2263056!4d-74.1869167?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D"  target="_blank" >Dirección: Calle 29H3 No. 22 - 01 Santa Marta D.T.C.H. - Colombia. Código Postal No. 470004</a>
 				</div>
-				
+
 
 
 				<footer>
@@ -143,14 +139,14 @@ import Layout from '../layouts/Layout.astro';
 						<h3> Derechos de autor </h3>
 						© 2025 Ponte Guapa by Dany Florez. All rights reserved | Desarrollado por el Centro de Desarrollo de Software
 					</section>
-					
+
 				</footer>
 
-				
+
 
 			</main>
-			
-			
+
+
 		</body>
 	</html>
 </Layout>
