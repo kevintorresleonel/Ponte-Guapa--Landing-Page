@@ -6,6 +6,7 @@
 	<title>Ponte Guapa</title>
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="icon" href="recursos/iconos/icon.png" type="image/png">
+	<script src="js/carousel.js" defer></script>
 </head>
 <body>
 <main>
@@ -34,70 +35,64 @@
 	<!-- Tarjeta de productos -->
 	<section id="productos" class="product-card">
 		<img src="recursos/imagenes/componentes/rosa.jpg" alt="Productos de belleza"/>
+		<p class="product-description">
+			En <span>Ponte Guapa</span>, creemos que el <span>bienestar</span> y la <span>belleza</span> van de la mano. Por eso,
+			hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
+			exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente.
+			<span class="author">• Dany Florez</span>
+		</p>
 	</section>
 
 	<!-- Descripción -->
 	<section class="description-section">
-		<p id="description">
-			En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso,
-			hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
-			exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente.
-		</p>
-		<strong>• Dany Florez.</strong>
+
+
 	</section>
 
 	<!-- Servicios -->
 	<div id="servicios" class="our-services">
 		<h2>Algunos de nuestros servicios...</h2>
-		<section class="services">
-			<div id="corte-de-cabello">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/corte-de-cabello.jpg" alt="Corte de cabello">
-				<p>Un recorte especial para realzar la gran mujer que eres</p>
-				<a href="">
+		<div class="carousel-container">
+			<button class="carousel-button prev" aria-label="Anterior">&#8249;</button>
+			<section class="services">
+				<div id="corte-de-cabello">
 					<button class="services-button">Corte de Cabello</button>
-				</a>
-			</div>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/corte-de-cabello.jpg" alt="Corte de cabello">
+					<p>Un recorte especial para realzar la gran mujer que eres</p>
+				</div>
 
-			<div id="pestañas">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/pestañas.png" alt="Pestañas">
-				<p>Dale vida a tus pestañas para ver el mundo desde otra perspectiva</p>
-				<a href="">
+				<div id="pestañas">
 					<button class="services-button">Pestañas</button>
-				</a>
-			</div>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/pestañas.png" alt="Pestañas">
+					<p>Dale vida a tus pestañas para ver el mundo desde otra perspectiva</p>
+				</div>
 
-			<div id="uñas">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/uñas.png" alt="Uñas">
-				<p>Transforma tus manos, dales vida y haz la diferencia</p>
-				<a href="">
+				<div id="uñas">
 					<button class="services-button">Uñas</button>
-				</a>
-			</div>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/uñas.png" alt="Uñas">
+					<p>Transforma tus manos, dales vida y haz la diferencia</p>
+				</div>
 
-			<div id="maquillaje">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/maquillajes.png" alt="Maquillaje">
-				<p>Dale brillo a tu rostro realzando las cosas que te hacen bella y única</p>
-				<a href="">
+				<div id="maquillaje">
 					<button class="services-button">Maquillaje</button>
-				</a>
-			</div>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/maquillajes.png" alt="Maquillaje">
+					<p>Dale brillo a tu rostro realzando las cosas que te hacen bella y única</p>
+				</div>
 
-			<div id="depilacion">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/depilaciones.png" alt="Depilación">
-				<p>Cambia como te ves y como te sientes contigo misma</p>
-				<a href="">
+				<div id="depilacion">
 					<button class="services-button">Depilación</button>
-				</a>
-			</div>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/depilaciones.png" alt="Depilación">
+					<p>Cambia como te ves y como te sientes contigo misma</p>
+				</div>
 
-			<div id="masaje-relajante">
-				<img class="services-img" src="recursos/imagenes/servicios-inicio/masajes.png" alt="Masaje Relajante">
-				<p>Date un tiempo de relajación con manos perfectamente calificadas</p>
-				<a href="">
+				<div id="masaje-relajante">
 					<button class="services-button">Masaje relajante</button>
-				</a>
-			</div>
-		</section>
+					<img class="services-img" src="recursos/imagenes/servicios-inicio/masajes.png" alt="Masaje Relajante">
+					<p>Date un tiempo de relajación con manos perfectamente calificadas</p>
+				</div>
+			</section>
+			<button class="carousel-button next" aria-label="Siguiente">&#8250;</button>
+		</div>
 	</div>
 
 	<!-- Formulario de contacto -->

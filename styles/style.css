@@ -104,7 +104,8 @@ main {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
-    padding: 0 20px;
+    padding: 80px 20px 0 20px;
+    margin-bottom: 25%;
 }
 
 .hero-content.animate {
@@ -115,6 +116,7 @@ main {
 .hero-title {
     font-family: Marcellus SC, serif;
     font-size: 3.5rem;
+    margin-top: 80px;
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.2;
@@ -150,6 +152,10 @@ main {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease, transform 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -159,6 +165,10 @@ main {
 
     .product-card {
         margin-top: -50px;
+    }
+
+    .hero-content {
+        padding-top: 60px;
     }
 }
 
@@ -178,26 +188,12 @@ main {
     background-color: var(--accent-color);
 }
 
-/* Sección de productos */
-.product-card {
-    width: 90%;
-    max-width: 1200px;
-    margin: -100px auto 0;
-    position: relative;
-    z-index: 3;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
 .product-card.animate {
     opacity: 1;
     transform: translateY(0);
     width: 80%;
     height: 70%;
+    margin-top: -18%;
 }
 .product-card.animate img{
     width: 70%;
@@ -285,6 +281,10 @@ main {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .services > div.animate {
@@ -307,8 +307,9 @@ main {
 
 .services p {
     color: #666;
-    margin-bottom: 1.5rem;
+    margin: 0;
     min-height: 60px;
+    text-align: center;
 }
 
 .services-button {
@@ -320,6 +321,7 @@ main {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 1.5rem;
 }
 
 .services-button:hover {
@@ -379,7 +381,7 @@ main {
 #formulario-contacto input,
 #formulario-contacto textarea {
     width: 100%;
-    padding: 0.75rem 0;
+    padding: 0.02rem 0;
     border: none;
     border-bottom: 1px solid #ccc;
     background-color: transparent;
@@ -510,4 +512,87 @@ footer {
     .map-section h2 {
         font-size: 1.5rem;
     }
+}
+
+/* Estilos del carrusel */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.services {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.services > div {
+    min-width: calc(33.333% - 1.33rem);
+    flex: 0 0 auto;
+    max-width: 350px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #e63d7a;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .services > div {
+        min-width: calc(100% - 2rem);
+        max-width: none;
+    }
+
+    .carousel-container {
+        padding: 0 40px;
+    }
+}
+
+.product-description {
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-description span {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.product-description .author {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--accent-color);
 }
