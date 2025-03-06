@@ -1,140 +1,218 @@
 <!doctype html>
-	<html lang="es">
-		<head>
-			<meta charset="UTF-8" />
-			<meta name="viewport" content="width=device-width" />
-			<title>Ponte Guapa</title>
-			<link rel="stylesheet" href="styles/style.css">
-		</head>
-		<body>
+<html lang="es">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Ponte Guapa</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<link rel="icon" href="recursos/iconos/icon.png" type="image/png">
+</head>
+<body>
+<main>
+	<header>
+		<img src="recursos/iconos/icon.png" alt="Logo Ponte Guapa" />
+		<nav class="nav">
+			<ul class="nav-list">
+				<li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+				<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+				<li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+				<li class="nav-item"><a class="nav-link" href="#formulario-contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
 
-			<main>
-				<header>
-					<img src="recursos/iconos/icon.png", alt="Logo Ponte Guapa" />
-					<nav class="nav">
-						<ul class="nav-list">
-							<li class="nav-item"><a class="nav-link" href="#servicios"> Servicios </a></li>
-							<li class="nav-item"><a class="nav-link" href=""> Producto </a></li>
-							<li class="nav-item"><a class="nav-link" href="#formulario-contacto"> Contacto </a></li>
-						</ul>
-					</nav>
-				</header>
+	<section id="inicio" class="hero-section">
+		<img src="recursos/imagenes/componentes/background.jpeg" alt="Fondo" class="hero-background"/>
+		<div class="hero-content">
+			<h1 class="hero-title">
+				RENUEVA<br>TU <span class="highlight">BELLEZA</span>,<br>
+				RELAJA TU <span class="highlight">ALMA</span>.
+			</h1>
+		</div>
+	</section>
 
-				<div>
-					<h3>Renueva tu belleza, relaja tu Alma. </h3>
-					<img src="recursos/imagenes/componentes/background.jpeg" alt="Fondo"/>
+	<!-- Tarjeta de productos -->
+	<section id="productos" class="product-card">
+		<img src="recursos/imagenes/componentes/rose.jpg" alt="Productos de belleza"/>
+	</section>
+
+	<!-- Descripción -->
+	<section class="description-section">
+		<p id="description">
+			En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso,
+			hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
+			exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente.
+		</p>
+		<strong>• Dany Florez.</strong>
+	</section>
+
+	<!-- Servicios -->
+	<div id="servicios" class="our-services">
+		<h2>Algunos de nuestros servicios...</h2>
+		<section class="services">
+			<div id="corte-de-cabello">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/corte-de-cabello.jpg" alt="Corte de cabello">
+				<p>Un recorte especial para realzar la gran mujer que eres</p>
+				<a href="">
+					<button class="services-button">Corte de Cabello</button>
+				</a>
+			</div>
+
+			<div id="pestañas">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/pestañas.png" alt="Pestañas">
+				<p>Dale vida a tus pestañas para ver el mundo desde otra perspectiva</p>
+				<a href="">
+					<button class="services-button">Pestañas</button>
+				</a>
+			</div>
+
+			<div id="uñas">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/uñas.png" alt="Uñas">
+				<p>Transforma tus manos, dales vida y haz la diferencia</p>
+				<a href="">
+					<button class="services-button">Uñas</button>
+				</a>
+			</div>
+
+			<div id="maquillaje">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/maquillajes.png" alt="Maquillaje">
+				<p>Dale brillo a tu rostro realzando las cosas que te hacen bella y única</p>
+				<a href="">
+					<button class="services-button">Maquillaje</button>
+				</a>
+			</div>
+
+			<div id="depilacion">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/depilaciones.png" alt="Depilación">
+				<p>Cambia como te ves y como te sientes contigo misma</p>
+				<a href="">
+					<button class="services-button">Depilación</button>
+				</a>
+			</div>
+
+			<div id="masaje-relajante">
+				<img class="services-img" src="recursos/imagenes/servicios-inicio/masajes.png" alt="Masaje Relajante">
+				<p>Date un tiempo de relajación con manos perfectamente calificadas</p>
+				<a href="">
+					<button class="services-button">Masaje relajante</button>
+				</a>
+			</div>
+		</section>
+	</div>
+
+	<!-- Formulario de contacto -->
+	<div id="formulario">
+		<form id="formulario-contacto">
+			<h3>Contáctanos</h3>
+
+			<div class="form-row">
+				<div class="form-group">
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" required>
 				</div>
 
-				<div>
-					<p id="description">
-						En Ponte Guapa, creemos que el bienestar y la belleza van de la mano. Por eso,
-						hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
-						exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente
-						Dany Florez.
-
-					</p>
+				<div class="form-group">
+					<label for="apellido">Apellido</label>
+					<input type="text" id="apellido" required>
 				</div>
+			</div>
 
-				<div id="servicios" class="our-services">
-					<h2> Nuestros servicios </h2>
-					<section class="services">
-						<!-- aquí las tarjetas de los diferentes servicios, corregidas del prototipo visual -->
-							<div id="corte-de-cabello">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/" alt="Corte de cabello " width="150" height="200">
-								<p>Un recorte especial para realzar la gran mujer que eres</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Corte de Cabello </button>
-								</a>
-							</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" id="email" required>
+			</div>
 
-							<div id="pestañas">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/pestañas.png" alt="Pestañas" width="150" height="200">
-								<p>Dale vida a tus pestañas para ver el mundo desde otra perspectiiva</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Pestañas </button>
-								</a>
-							</div>
+			<div class="form-group">
+				<label for="mensaje">Escribe un mensaje</label>
+				<textarea id="mensaje" required></textarea>
+			</div>
 
-							<div id="uñas">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/uñas.png" alt="Uñas" width="150" height="200">
-								<p> Transforma tus manos, dales vida y  haz la diferencia</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Uñas </button>
-								</a>
-							</div>
+			<div class="form-button">
+				<button type="submit">Enviar</button>
+			</div>
+		</form>
+	</div>
 
-							<div id="maquillaje">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/maquillajes.png" alt="Maquillaje " width="150" height="200">
-								<p>Dale brillo a tu  rostro realzando las cosas que te hacen bella y unica</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Maquillaje </button>
-								</a>
-							</div>
+	<!-- Mapa -->
+	<div class="map-section">
+		<h2>Ven y visítanos en nuestra sede.</h2>
 
-							<div id="depilacion">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/depilaciones.png" alt="Depilacion " width="150" height="200">
-								<p>Cambia como te ves y como te sientes contigo misma</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Depilación </button>
-								</a>
-							</div>
+		<div class="map-container">
+			<img src="recursos/imagenes/componentes/map.jpg" alt="Mapa de ubicación" />
+		</div>
 
-							<div id="masaje-relajante">
-								<img class="services-img" src="recursos/imagenes/servicios-inicio/masajes.png" alt="Masaje Relajante" width="150" height="200">
-								<p>Date un tiempo de relajacion con manos perfectamente calificadas</p>
-								<!-- botonn para acceder a detalles y sub servicios especificos -->
-								<a href="">
-									<button class="services-button"> Masaje relajante </button>
-								</a>
-							</div>
-					</section>
-				</div>
+		<div class="address">
+			Calle 29H3 No 22 - 01<br>
+			Santa Marta D.T.C.H. - Colombia.<br>
+			Código Postal No. 470004
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-copyright">
+			© 2025 Ponte Guapa by Dany Florez. All rights reserved | Desarrollado por el Centro de Desarrollo de Software
+		</div>
+
+		<div class="social-icons">
+			<a href="#" class="social-icon" aria-label="Instagram">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+			</a>
+			<a href="#" class="social-icon" aria-label="Facebook">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+			</a>
+		</div>
+	</footer>
+</main>
 
 
-				<div>
-					<!--Aquí la barra de caracteristicas, por decidir si se implementa -->
-				</div>
+<script>
+	// Script para animaciones
+	document.addEventListener('DOMContentLoaded', function() {
 
-				<div id="formulario" >
-					<form id="formulario-contacto">
-						<h3> Contactanos </h3>
-						<input type="text" placeholder="Nombre" required>
-						<input type="text" placeholder="Apellido" required>
-						<input type="email" placeholder="Email" required>
-						<textarea placeholder="Escribe tu mensaje" required> Escribe tu mensaje </textarea>
-						<button type="submit"> Enviar </button>
-					</form>
-				</div>
+		// Función para verificar si un elemento está en el viewport
+		function isElementInViewport(el) {
+			const rect = el.getBoundingClientRect();
+			return (
+					rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+					rect.bottom >= 0
+			);
+		}
 
-				<div>
-					<h2> Encuentranos </h2>
-					<img src="recursos/imagenes/componentes/map.jpg" />
-					<a class="footer-link" href="https://www.google.com.co/maps/place/11%C2%B013'34.7%22N+74%C2%B011'12.9%22W/@11.2263056,-74.1869167,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.2263056!4d-74.1869167?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D"  target="_blank" >Dirección: Calle 29H3 No. 22 - 01 Santa Marta D.T.C.H. - Colombia. Código Postal No. 470004</a>
-				</div>
+		// Elementos a animar
+		const elementsToAnimate = [
+			document.querySelector('.hero-content'),
+			document.querySelector('.product-card'),
+			document.querySelector('.description-section'),
+			document.querySelector('.our-services h2'),
+			...document.querySelectorAll('.services > div'),
+			document.querySelector('#formulario-contacto'),
+			document.querySelector('.map-section h2 '),
+		];
 
+		// Función para activar animaciones
+		function checkScroll() {
+			elementsToAnimate.forEach(element => {
+				if (isElementInViewport(element) && element) {
+					element.classList.add('animate');
+				}
+			});
+		}
 
+		// Verificar al cargar la página
+		checkScroll();
 
-				<footer>
-					<section>
-						<h3>Información de contacto</h3>
-					</section>
+		// Verificar al hacer scroll
+		window.addEventListener('scroll', checkScroll);
 
-					<section>
-						<h3> Derechos de autor </h3>
-						© 2025 Ponte Guapa by Dany Florez. All rights reserved | Desarrollado por el Centro de Desarrollo de Software
-					</section>
-
-				</footer>
-
-
-
-			</main>
-
-
-		</body>
-	</html>
+		// Animar hero section inmediatamente
+		setTimeout(() => {
+			const heroContent = document.querySelector('.hero-content');
+			if (heroContent) {
+				heroContent.classList.add('animate');
+			}
+		}, 300);
+	});
+</script>
+</body>
+</html>
