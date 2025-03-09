@@ -20,6 +20,6 @@ HTML: Para la estructura del sitio.
 
 CSS: Para el diseño y la presentación visual.
 
-JavaScript: Para la interactividad y validación del formulario de contacto.
+JavaScript: Para la interactividad y estilos de comportamiento como el carrusel de servicios
 
 👥 Autores del Proyecto
