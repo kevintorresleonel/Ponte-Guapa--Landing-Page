@@ -57,4 +57,38 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // manejo de menú hamburguesa
+    const hamburger = document.querySelector('.hamburger-menu');
+    const nav = document.querySelector('.nav');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+        document.body.classList.toggle('no-scroll');
+    }
+
+    hamburger.addEventListener('click', toggleMenu);
+    menuOverlay.addEventListener('click', toggleMenu);
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (nav.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // evitar scroll cuando el menú está abierto
+    document.head.insertAdjacentHTML('beforeend', `
+        <style>
+            .no-scroll {
+                overflow: hidden;
+            }
+        </style>
+    `);
 });
