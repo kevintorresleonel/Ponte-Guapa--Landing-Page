@@ -18,6 +18,10 @@ body {
     overflow-x: hidden;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,6 +50,9 @@ header img {
     width: auto;
 }
 
+.nav{
+    margin-left: auto;
+}
 .nav-list {
     list-style: none;
     display: flex;
@@ -487,6 +494,7 @@ footer {
     opacity: 0.8;
 }
 
+/* Media query para dispositivos móviles */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -514,20 +522,25 @@ footer {
     }
 }
 
-/* Estilos del carrusel */
 .carousel-container {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 60px;
+    overflow: hidden;
 }
 
 .services {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
     scroll-behavior: smooth;
     gap: 2rem;
     padding: 2rem 0;
+    -ms-overflow-style: none;
+}
+
+.services::-webkit-scrollbar {
+    display: none;
 }
 
 .services > div {
@@ -543,13 +556,16 @@ footer {
     background-color: var(--primary-color);
     color: white;
     border: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 24px;
     cursor: pointer;
     z-index: 10;
     transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-button:hover {
@@ -565,6 +581,32 @@ footer {
     right: 10px;
 }
 
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: var(--primary-color);
+}
+
+@media (max-width: 992px) {
+    .services > div {
+        min-width: calc(50% - 1rem);
+    }
+}
+
 @media (max-width: 768px) {
     .services > div {
         min-width: calc(100% - 2rem);
@@ -573,6 +615,24 @@ footer {
 
     .carousel-container {
         padding: 0 40px;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-container {
+        padding: 0 30px;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
     }
 }
 
@@ -595,4 +655,91 @@ footer {
     margin-top: 1rem;
     font-weight: 600;
     color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    /* Menú hamburguesa para móviles */
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        z-index: 1010;
+    }
+
+    .hamburger-menu span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: var(--text-color);
+        border-radius: 3px;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 90%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(10px);
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 80px;
+    }
+
+    .nav.active {
+        right: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    /* Estilos para el botón hamburguesa cuando está activo */
+    .hamburger-menu.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Overlay para cerrar el menú al hacer clic fuera */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+
+    header {
+        padding: 0.75rem 1rem;
+    }
 }
