@@ -34,6 +34,16 @@ html {
     scroll-behavior: smooth;
 }
 
+#logo-img{
+    width: 50px;
+    margin-top: 100px;
+
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
 
 .componentes {
     display: flex; 
@@ -45,17 +55,12 @@ html {
 
 .imagen-background {
     width: 70%; 
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white; 
+    object-fit: cover;
+
 }
 
-.imagen-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-}
 
 .login-contenedor {
     width: 30%; 
@@ -63,28 +68,124 @@ html {
     background-color: white;
     display: flex;
     flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    justify-content: left; 
+    align-items: left; 
+    font-size: 12px;
+    margin-left: 50px;
     
 }
 
 .formulario{
-    justify-content: center; 
-    align-items: center;
-    text-align: center;
-  
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    
 
 }
 
-.recuerdame.contraseña{
+.formulario-input {
+    width: 300px;
+    height: 40px;
+    background-color: rgb(230, 224, 224);
+    color: #454343;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    
     
 }
+
+
+.contenedor-contraseña {
+    position: relative;
+    width: 100%;
+}
+
+
+.recuerdame-contraseña {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+
+}
+
+
+#recuerdame{
+    margin-right: 20px;
+    font-size: 12px;
+}
+
+#olvidaste-contraseña {
+    text-decoration: none;
+    color: #ff4d8d;
+    font-size: 12px;
+}
+
+.icon-eye {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.eye-icon:hover {
+    opacity: 1;
+}
+
 
 .botones{
+    padding: 30px;
+    padding-bottom: 20px;
+    width: 300px;
     
+}
+
+#iniciar-sesion{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #ff4d8d;
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+    font-weight: bold;
+}
+
+#sesion-google{
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: black;
+    border-radius: 8px;
+    border-color: white;
+    color: white;
+    font-weight: bold;
 }
 
 .preguntas{
-    display: block;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#no-cuenta {
+    text-decoration: none;
+    color: black; 
+    margin-right: 20px;
+    
+}
+
+#contacta-admin {
+    text-decoration: none;
+    color: #ff4d8d; 
+
 }

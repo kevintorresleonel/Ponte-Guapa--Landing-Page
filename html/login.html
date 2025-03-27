@@ -16,16 +16,22 @@
             </div>
             
             <div class="login-contenedor">
-                <img src="../recursos/iconos/icon.png" alt="Logo Ponte Guapa" />
+                <img id="logo-img" src="../recursos/iconos/icon.png" alt="Logo Ponte Guapa" />
+                <h2>¡Bienvenida!</h2>
+
                 <form class="formulario">
-                    <p>¡Bienvenida!</p>
                     <label>Usuario</label>
-                    <input type="email" placeholder="Email"> 
+                    <br>
+                    <input class="formulario-input" type="email" placeholder="Email"> 
                     <br>
                     <label>Contraseña</label>
-                    <input type="password" placeholder="Ingresar Contraseña">
-
-                    
+                    <br>
+                    <div class="contenedor-contraseña">
+                        <div class="contenedor-contraseña">
+                            <input id="password-input" class="formulario-input" type="password" placeholder="Ingresar Contraseña">
+                            <img class="icon-eye" src="../recursos/iconos/icon-eye.png" alt="Ver">
+                        </div>    
+                    </div>
                 </form>
 
                 <br>
@@ -35,8 +41,8 @@
                         <input type="checkbox">
                         <span class="slider"></span>
                     </label>
-                    <span>Recuérdame</span>
-                    <a href="#">¿Olvidaste la contraseña?</a>
+                    <span id="recuerdame">Recuérdame</span>
+                    <a href="#" id="olvidaste-contraseña">¿Olvidaste la contraseña?</a>
                 </div>
 
                 <div class="botones">
@@ -45,15 +51,15 @@
                     </a>
                     <hr>
                     <a href=" ">
-                        <button id="sesion-google">Iniciar sesión con google</button>
+                        <button id="sesion-google"><img src="../recursos/iconos/icon-google.svg" alt="Icono" width="15" height="15">Iniciar sesión con google</button>
                     </a>
                     
                 </div>
 
                 <div class="preguntas">
-                    <a href="#">¿No tienes cuenta?</a>
+                    <a id="no-cuenta" href="#">¿No tienes cuenta?</a>
                     <br>
-                    <a href="#">Contacta con el administrador</a>
+                    <a id="contacta-admin" href="#">Contacta con el administrador</a>
 
                 </div>
                 
