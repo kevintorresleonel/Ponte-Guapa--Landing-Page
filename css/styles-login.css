@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 
-<<<<<<< HEAD
+
 :root {
     --primary-color: #ff4d8d;
     --accent-color: #ffae00;
@@ -9,8 +9,7 @@
     --background-color: #fff;
     --transition-speed: 0.5s;
 }
-=======
->>>>>>> 078461cf448f1b2c079a00c2744e85801e5c8718
+
 
 body {
     font-family: 'Manrope', sans-serif;
@@ -40,6 +39,7 @@ html {
     display: flex; 
     height: 100vh; 
     width: 100%;
+    
 }
 
 
@@ -54,7 +54,7 @@ html {
 .imagen-background img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajustar la imagen sin deformarla */
+    object-fit: cover; 
 }
 
 .login-contenedor {
@@ -62,6 +62,29 @@ html {
     height: 100vh; 
     background-color: white;
     display: flex;
+    flex-direction: column; 
     justify-content: center; 
     align-items: center; 
+    
+}
+
+.formulario{
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+  
+
+}
+
+.recuerdame.contraseña{
+    
+}
+
+.botones{
+    
+}
+
+.preguntas{
+    display: block;
+    text-align: center;
 }
