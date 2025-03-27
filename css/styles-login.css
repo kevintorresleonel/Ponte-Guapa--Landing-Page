@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
 
+<<<<<<< HEAD
 :root {
     --primary-color: #ff4d8d;
     --accent-color: #ffae00;
@@ -8,6 +9,8 @@
     --background-color: #fff;
     --transition-speed: 0.5s;
 }
+=======
+>>>>>>> 078461cf448f1b2c079a00c2744e85801e5c8718
 
 body {
     font-family: 'Manrope', sans-serif;
@@ -22,20 +25,26 @@ body.no-scroll {
     overflow: hidden;
 }
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+} 
+
 html {
     scroll-behavior: smooth;
 }
 
 
 .componentes {
-    display: flex; /* Para que la imagen y el formulario estén en línea */
-    height: 100vh; /* Ocupar toda la pantalla */
+    display: flex; 
+    height: 100vh; 
     width: 100%;
 }
 
-/* Contenedor de la imagen */
+
 .imagen-background {
-    width: 70%; /* La imagen ocupará la mitad izquierda */
+    width: 70%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,10 +57,9 @@ html {
     object-fit: cover; /* Ajustar la imagen sin deformarla */
 }
 
-/* Contenedor del formulario */
 .login-contenedor {
-    width: 30%; /* La otra mitad de la pantalla */
-    height: 100vh; /* Ocupar toda la pantalla */
+    width: 30%; 
+    height: 100vh; 
     background-color: white;
     display: flex;
     justify-content: center; 
