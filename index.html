@@ -7,27 +7,26 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="recursos/iconos/icon.png" type="image/png">
 	<script src="js/carousel.js" defer></script>
-	<script src="js/animations.js" defer></script>
+	<script src="js/header.js" defer></script>
 </head>
 <body>
 <main>
 	<header>
 		<img src="recursos/iconos/icon.png" alt="Logo Ponte Guapa" />
-		<div class="hamburger-menu">
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
 		<nav class="nav">
 			<ul class="nav-list">
-				<li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
 				<li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
 				<li class="nav-item"><a class="nav-link" href="#formulario-contacto">Contacto</a></li>
-				<li class="nav-item"><a class="nav-link" href="html/login.html" >Log in</a></li>
+				<li >
+					<a href="html/login.html">
+						<img src="recursos/iconos/USER.png" alt="iconologin">
+					</a>
+				</li>
+
+
 			</ul>
 		</nav>
-		<div class="menu-overlay"></div>
 	</header>
 
 	<section id="inicio" class="hero-section">
@@ -40,25 +39,22 @@
 		</div>
 	</section>
 
-	<!-- Imagen Rosa-Productos de Belleza -->
+	<!-- Tarjeta de productos -->
 	<section id="productos" class="product-card">
 		<img src="recursos/imagenes/componentes/rosa.jpg" alt="Productos de belleza"/>
-		
-	</section>
-
-	<!-- Descripción -->
-	<section class="description-section">
 		<p class="product-description">
 			En <span>Ponte Guapa</span>, creemos que el <span>bienestar</span> y la <span>belleza</span> van de la mano. Por eso,
 			hemos creado un espacio diseñado para cuidar de ti, ofreciéndote tratamientos
 			exclusivos que revitalizan tu cuerpo, renuevan tu imagen y relajan tu mente.
 			<span class="author">• Dany Florez</span>
 		</p>
-
 	</section>
 
+	<!-- Descripción -->
+	<section class="description-section"></section>
+
 	<!-- Servicios -->
-	<section id="servicios" class="our-services">
+	<div id="servicios" class="our-services">
 		<h2>Algunos de nuestros servicios...</h2>
 		<div class="carousel-container">
 			<button class="carousel-button prev" aria-label="Anterior">&#8249;</button>
@@ -101,7 +97,7 @@
 			</section>
 			<button class="carousel-button next" aria-label="Siguiente">&#8250;</button>
 		</div>
-	</section>
+	</div>
 
 	<!-- Formulario de contacto -->
 	<div id="formulario">
@@ -131,7 +127,7 @@
 			</div>
 
 			<div class="form-button">
-				<button type="submit" aria-label="Enviar mensaje">Enviar</button>
+				<button type="submit">Enviar</button>
 			</div>
 		</form>
 	</div>
@@ -158,15 +154,78 @@
 		</div>
 
 		<div class="social-icons">
-			<a href="#" class="social-icon" aria-label="Instagram" target="_blank">
+			<a href="#" class="social-icon" aria-label="Instagram">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
 			</a>
-			<a href="#" class="social-icon" aria-label="Facebook" target="_blank">
+			<a href="#" class="social-icon" aria-label="Facebook">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
 			</a>
 		</div>
 	</footer>
 </main>
 
+
+<script>
+	// Script para animaciones
+	document.addEventListener('DOMContentLoaded', function() {
+
+		// Función para verificar si un elemento está en el viewport
+		function isElementInViewport(el) {
+			const rect = el.getBoundingClientRect();
+			return (
+					rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+					rect.bottom >= 0
+			);
+		}
+
+		// Elementos a animar
+		const elementsToAnimate = [
+			document.querySelector('.hero-content'),
+			document.querySelector('.product-card'),
+			document.querySelector('.description-section'),
+			document.querySelector('.our-services h2'),
+			...document.querySelectorAll('.services > div'),
+			document.querySelector('#formulario-contacto'),
+			document.querySelector('.map-section h2 '),
+		];
+
+		// Función para activar animaciones
+		function checkScroll() {
+			elementsToAnimate.forEach(element => {
+				if (isElementInViewport(element) && element) {
+					element.classList.add('animate');
+				}
+			});
+		}
+
+		// Verificar al cargar la página
+		checkScroll();
+
+		// Verificar al hacer scroll
+		window.addEventListener('scroll', checkScroll);
+
+		// Animar hero section inmediatamente
+		setTimeout(() => {
+			const heroContent = document.querySelector('.hero-content');
+			if (heroContent) {
+				heroContent.classList.add('animate');
+			}
+		}, 300);
+
+		// Añadir manejo de scroll suave para los enlaces de navegación
+		document.querySelectorAll('.nav-link').forEach(anchor => {
+			anchor.addEventListener('click', function(e) {
+				e.preventDefault();
+				const targetId = this.getAttribute('href');
+				const targetElement = document.querySelector(targetId);
+
+				targetElement.scrollIntoView({
+					behavior: 'smooth',
+					block: 'start'
+				});
+			});
+		});
+	});
+</script>
 </body>
 </html>
