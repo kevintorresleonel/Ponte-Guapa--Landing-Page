@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextButton = document.querySelector('.carousel-button.next');
     const cards = carousel.querySelectorAll('div');
     let currentPosition = 0;
-    let cardWidth;
-    let visibleCards;
-    let maxScroll;
+    let cardWidth = cards[0].offsetWidth+32;
+    let visibleCards =3;
+    let maxScroll= (cards.length - visibleCards) * cardWidth;
     let direction = 1; // 1 para adelante, -1 para atrás
     let autoScrollInterval;
-    const scrollDelay = 3000; // 3 segundos
+    const scrollDelay =  10000; // 6 s
 
     // Crear indicadores de carrusel
     const indicatorsContainer = document.createElement('div');
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Calcular el desplazamiento máximo
-        maxScroll = (cards.length - visibleCards) * cardWidth;
+        maxScroll = (cards.length - visibleCards) * cardWidth+1000;
 
         // Actualizar el número de indicadores
         updateIndicators();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             indicator.addEventListener('click', () => {
                 goToPage(i);
                 stopAutoScroll();
-                setTimeout(startAutoScroll, 5000);
+                setTimeout(startAutoScroll, 10000);
             });
 
             indicatorsContainer.appendChild(indicator);
@@ -111,7 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const newPosition = currentPosition + moveIncrement;
 
         if (newPosition >= 0 && newPosition <= maxScroll) {
-            currentPosition = newPosition;
+            if(currentPosition > newPosition){
+                currentPosition = newPosition+300;
+            }
+            else{
+                currentPosition = newPosition-900;
+            }
+
         } else if (newPosition < 0) {
             currentPosition = 0;
         } else if (newPosition > maxScroll) {
@@ -146,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', () => {
         moveCarousel(-1);
         stopAutoScroll();
-        setTimeout(startAutoScroll, 5000); // Reiniciar después de 5 segundos
+       // Reiniciar después de 5 segundos
     });
 
     nextButton.addEventListener('click', () => {
