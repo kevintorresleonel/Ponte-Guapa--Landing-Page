@@ -232,6 +232,89 @@ main {
     display: block;
 }
 
+/* Servicios Destacados */
+.featured-services {
+    background: linear-gradient(135deg, #ff4d8d 0%, #ff1f6b 100%);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-content {
+    flex: 1;
+    color: white;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: slideIn 1s ease forwards;
+}
+
+.featured-content h2 {
+    font-family: 'Marcellus SC', serif;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.featured-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.featured-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideIn 1s ease forwards 0.3s;
+}
+
+.featured-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.featured-image img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-services {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .featured-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .featured-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .featured-image {
+        margin-top: 2rem;
+    }
+}
+
 /* Descripción */
 .description-section {
     padding: 6rem 2rem 4rem;
