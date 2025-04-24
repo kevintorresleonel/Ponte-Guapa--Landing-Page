@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Seleccionar Fecha</title>
+  <link rel="stylesheet" href="../css/elegir-horario-styles.css">
+  
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenedor-fecha">
+            <h1>Selecciona una Fecha y Hora</h1>
+        
+            <div class="servicios-elegidos">
+              <h2>Servicios Seleccionados</h2>
+              <ul id="servicios-lista"></ul>
+              <p class="total">Total: $<span id="total"></span></p>
+            </div>
+        
+            <div class="fecha-hora">
+              <label for="fecha">Fecha:</label>
+              <input type="date" id="fecha" min="" />
+        
+              <label for="hora">Hora:</label>
+              <select id="hora"></select>
+            </div>
+        
+            <button class="confirmar">Confirmar Cita</button>
+          </div>
+        
+          <!-- Modal de Inicio de Sesión -->
+          <div class="modal" id="modal-login">
+            <div class="modal-content">
+              <h2>Iniciar sesión o registrarse</h2>
+              <p>Inicia sesión o regístrate para completar tu reserva</p>
+              <div class="social-login">
+                <button class="facebook-button">
+                  <img src="../recursos/iconos/social-media/icon-facebook.png" alt="Facebook" width="20">
+                  Continuar con Facebook
+                </button>
+                <button class="google-button">
+                  <img src="../recursos/iconos/icon-google.svg" alt="Google" width="20">
+                  Continuar con Google
+                </button>
+              </div>
+              <input type="email" placeholder="Correo electrónico" required>
+              
+              <button>Continuar</button>
+              <span class="cerrar-modal">Cancelar</span>
+            </div>
+          </div>
+        
+          <script src="../js/elegir-horario.js"></script>
+
+    </div>
+  
+</body>
+</html>

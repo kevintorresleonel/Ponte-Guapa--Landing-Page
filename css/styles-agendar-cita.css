@@ -1,0 +1,188 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: white; 
+    color: black;
+    min-height: 100vh;
+}
+body {
+    background-image: url('../recursos/imagenes/componentes/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Opcional: para efecto parallax */
+  }
+  .contenedor {
+    background-color: rgba(255, 255, 255, 0.0); /* Blanco con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+  }
+    
+  
+.contenedor {
+    display: flex;
+    width: 90%;
+    max-width: 1300px;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+  
+.servicios,
+.resumen {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.servicios:hover,
+.resumen:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px rgba(255, 77, 141, 0.25); /* Cambiado a rosa */
+}
+  
+.servicios {
+    flex: 2;
+    min-width: 300px;
+}
+  
+.resumen {
+    flex: 1;
+    min-width: 280px;
+    height: fit-content;
+    border: 1px solid #2e2e2e;
+}
+  
+h1,
+h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ff4d8d; /* Cambiado a rosa */
+    font-weight: 600;
+}
+  
+.servicio {
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+  
+.servicio:hover {
+    box-shadow: 0 0 12px rgba(255, 77, 141, 0.3); /* Cambiado a rosa */
+    border-color: #ff4d8d; /* Cambiado a rosa */
+}
+  
+.servicio h3 {
+    margin: 0 0 5px;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+  
+.servicio small {
+    color: black;
+    font-size: 0.9em;
+}
+  
+.precio {
+    color: #ff4d8d; /* Cambiado a rosa */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+  
+.agregar {
+    background: #ff4d8d; /* Cambiado a rosa */
+    color: #fff; /* Cambiado a blanco */
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    transition: background 0.3s ease, transform 0.2s;
+}
+  
+.agregar:hover {
+    background: #ff2a6d; /* Rosa oscuro */
+    transform: scale(1.1);
+}
+  
+.eliminar {
+    background: #f52e6d;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+  
+.eliminar:hover {
+    background: #ef3771;
+    transform: scale(1.1);
+}
+  
+.acciones {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+  
+.resumen ul {
+    list-style: none;
+    padding-left: 0;
+}
+  
+.resumen li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    padding: 10px;
+    background: white;
+    border-left: 4px solid #ff4d8d; /* Cambiado a rosa */
+    border-radius: 8px;
+}
+  
+.total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #ff4d8d; /* Cambiado a rosa */
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+  
+.continuar {
+    margin-top: 30px;
+    display: inline-block;
+    width: 100%;
+    padding: 15px;
+    background: #ff4d8d; /* Cambiado a rosa */
+    color: #fff; /* Cambiado a blanco */
+    border: none;
+    border-radius: 14px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s;
+}
+  
+.continuar:hover {
+    background:#ff59a1; /* Cambiado a rosa */
+    transform: scale(1.02);
+}
